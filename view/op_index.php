@@ -11,7 +11,7 @@
     <td><?php print htmlspecialchars($repo['id']); ?></td>
     <td><?php print htmlspecialchars($repo['name']); ?></td>
     <td><?php print htmlspecialchars($repo['active']); ?></td>
-    <td><?php print htmlspecialchars($repo['id_storage']); ?></td>
+    <td><?php print htmlspecialchars($repo['storage']); ?></td>
     <td>
       <a href="index.php?op=update&id=<?php print htmlspecialchars($repo['id']); ?>">Edit</a>
     </td>
