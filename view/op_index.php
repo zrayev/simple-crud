@@ -18,3 +18,7 @@
   </tr>
   <?php endforeach; ?>
 </table>
+
+<div>
+  <a href="index.php?op=create">Create</a>
+</div>

@@ -10,6 +10,15 @@
   </div>
 
   <div>
+    <label for="storage">Storage</label>
+    <select id="storage" name="id_storage">
+      <?php foreach ($storages as $storage) : ?>
+      <option value="<?php print htmlspecialchars($storage['id']); ?>"><?php print htmlspecialchars($storage['name']); ?></option>
+      <?php endforeach; ?>
+    </select>
+  </div>
+
+  <div>
     <input type="submit" name="save" value="Save">
   </div>
 </form>
