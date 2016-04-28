@@ -13,6 +13,10 @@ switch ($op) {
     require __DIR__ . '/op/update.php';
     break;
 
+  case 'delete':
+    require __DIR__ . '/op/delete.php';
+    break;
+
   default:
     require __DIR__ . '/op/index.php';
 }

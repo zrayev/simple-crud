@@ -14,6 +14,7 @@
     <td><?php print htmlspecialchars($repo['storage']); ?></td>
     <td>
       <a href="index.php?op=update&id=<?php print htmlspecialchars($repo['id']); ?>">Edit</a>
+      <a href="index.php?op=delete&id=<?php print htmlspecialchars($repo['id']); ?>">Delete</a>
     </td>
   </tr>
   <?php endforeach; ?>
