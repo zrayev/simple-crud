@@ -11,7 +11,7 @@
   <tr>
     <td><?php print htmlspecialchars($product['id']); ?></td>
     <td><?php print htmlspecialchars($product['name']); ?></td>
-    <td><?php print htmlspecialchars($product['id_storehouse']); ?></td>
+    <td><?php print htmlspecialchars($product['Storehouse']); ?></td>
     <td><?php print htmlspecialchars($product['price']); ?></td>
     <td><?php print htmlspecialchars($product['quantity']); ?></td>
     <td>

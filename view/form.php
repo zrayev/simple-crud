@@ -8,7 +8,7 @@
     <label for="storehouse">Storehouse</label>
     <select id="storehouse" name="id_storehouse">
       <?php foreach ($storehouses as $storehouse):?>
-          <option value="<?php print htmlspecialchars($storehouse['id'])?>"> <?php print htmlspecialchars($storehouse['id'])?></option>
+          <option value="<?php print htmlspecialchars($storehouse['id'])?>"> <?php print htmlspecialchars($storehouse['name'])?></option>
       <?php endforeach;?>
 
     </select>
