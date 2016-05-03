@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Simple CRUD</title>
+  <title>CRUD HOMEWORK</title>
 </head>
 <body>
 <div class="center">

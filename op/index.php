@@ -1,19 +1,20 @@
 <?php
 
-$sth = $pdo->prepare('SELECT
- repositories.id,
- repositories.name,
- repositories.active,
- repositories.id_storage,
- storages.name AS storage
-FROM repositories
-INNER JOIN storages ON repositories.id_storage = storages.id
-ORDER BY id ASC');
+$sth= $pdo->prepare('SELECT * FROM Product ORDER BY idProduct ASC');
+//$sth = $pdo->prepare('SELECT
+// repositories.id,
+// repositories.name,
+// repositories.active,
+// repositories.id_storage,
+// storages.name AS storage
+//FROM repositories
+//INNER JOIN storages ON repositories.id_storage = storages.id
+//ORDER BY id ASC');
 $sth->execute();
 
-$repos = array();
+$products = array();
 while ($row = $sth->fetch(PDO::FETCH_ASSOC)) {
-  $repos[] = $row;
+  $products[] = $row;
 }
 
 ob_start();
