@@ -1,23 +1,26 @@
 <?php
 
-$repo = array(
+$product = array(
   'name' => '',
-  'active' => 0,
+  'id_storehouse' =>'1',
+  'price' => '',
+  'quantity' => '',
 );
 
 if (!empty($_POST['save'])) {
-  $sth = $pdo->prepare('INSERT INTO repositories (name, active, id_storage) VALUES (:name, :active, :id_storage)');
+  $sth = $pdo->prepare('INSERT INTO Product (name, id_storehouse, price, quantity) VALUES (:name, :id_storehouse, :price, :quantity)');
   $sth->execute(array(
-    ':name' => $_POST['name'],
-    ':active' => (!empty($_POST['active']) ? 1 : 0),
-    ':id_storage' => $_POST['id_storage'],
-  ));
+      ':name' => $_POST['name'],
+      ':id_storehouse' => $_POST['id_storehouse'],
+      ':price' => $_POST['price'],
+      ':quantity' => $_POST['quantity'],
+    ));
 
   header('Location: index.php');
   exit;
 }
 
-$storages = get_available_storages();
+  $storehouses = get_available_storehouses();
 
 ob_start();
 

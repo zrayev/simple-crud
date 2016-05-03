@@ -6,9 +6,10 @@ $sth->execute(array(':id' => $_GET['id']));
 if ($product = $sth->fetch(PDO::FETCH_ASSOC)) {
 
   if (!empty($_POST['save'])) {
-    $sth = $pdo->prepare('UPDATE Product SET name = :name, price = :price, quantity = :quantity WHERE id = :id');
+    $sth = $pdo->prepare('UPDATE Product SET name = :name, id_storehouse = :id_storehouse, price = :price, quantity = :quantity WHERE id = :id');
     $sth->execute(array(
       ':name' => $_POST['name'],
+      ':id_storehouse' => $_POST['id_storehouse'],
       ':price' => $_POST['price'],
       ':quantity' => $_POST['quantity'],
       ':id' => $_GET['id'],
@@ -18,7 +19,7 @@ if ($product = $sth->fetch(PDO::FETCH_ASSOC)) {
     exit;
   }
 
-//  $storages = get_available_storages();
+  $storehouses = get_available_storehouses();
 
   ob_start();
 
