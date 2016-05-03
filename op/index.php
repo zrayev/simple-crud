@@ -1,6 +1,6 @@
 <?php
 
-$sth= $pdo->prepare('SELECT * FROM Product ORDER BY idProduct ASC');
+$sth= $pdo->prepare('SELECT * FROM Product ORDER BY id ASC');
 //$sth = $pdo->prepare('SELECT
 // repositories.id,
 // repositories.name,
