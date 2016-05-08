@@ -1,4 +1,5 @@
-<table>
+<table border="2px" class="table table-condensed">
+  <caption><h2>CRUD Product&Storehouse</h2></caption>
   <tr>
     <th>ID</th>
     <th>Name</th>

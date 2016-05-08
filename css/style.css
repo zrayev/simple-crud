@@ -1,0 +1,19 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    width: auto;
+}
+
+h1 {
+    letter-spacing: 2px;
+}
+
+form {
+    width: 300px;
+    background-color: yellowgreen;
+    padding: 15px;
+    border-radius: 10px;
+}
