@@ -1,0 +1,30 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    width: auto;
+}
+
+h1 {
+    letter-spacing: 2px;
+}
+
+form {
+    width: auto;
+    background-color: yellowgreen;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+input {
+    background: #eaeaea;
+    display: table;
+}
+
+.btn_center{
+    padding-top: 5px;
+    display: flex;
+    justify-content: center;
+}

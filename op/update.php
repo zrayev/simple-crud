@@ -1,16 +1,17 @@
 <?php
 
-$sth = $pdo->prepare('SELECT * FROM repositories WHERE id = :id');
+$sth = $pdo->prepare('SELECT * FROM Product WHERE id = :id');
 $sth->execute(array(':id' => $_GET['id']));
 
-if ($repo = $sth->fetch(PDO::FETCH_ASSOC)) {
+if ($product = $sth->fetch(PDO::FETCH_ASSOC)) {
 
   if (!empty($_POST['save'])) {
-    $sth = $pdo->prepare('UPDATE repositories SET name = :name, active = :active, id_storage = :id_storage WHERE id = :id');
+    $sth = $pdo->prepare('UPDATE Product SET name = :name, id_storehouse = :id_storehouse, price = :price, quantity = :quantity WHERE id = :id');
     $sth->execute(array(
       ':name' => $_POST['name'],
-      ':active' => (!empty($_POST['active']) ? 1 : 0),
-      ':id_storage' => $_POST['id_storage'],
+      ':id_storehouse' => $_POST['id_storehouse'],
+      ':price' => $_POST['price'],
+      ':quantity' => $_POST['quantity'],
       ':id' => $_GET['id'],
     ));
 
@@ -18,7 +19,7 @@ if ($repo = $sth->fetch(PDO::FETCH_ASSOC)) {
     exit;
   }
 
-  $storages = get_available_storages();
+  $storehouses = get_available_storehouses();
 
   ob_start();
 
